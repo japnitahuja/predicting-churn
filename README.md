@@ -2,6 +2,8 @@
 
 This repository contains the implementation and analysis of a machine learning project focused on predicting customer churn in the banking sector. Customer churn, the phenomenon of customers leaving a service, can significantly impact a bank's operations and revenues. In this project, we explore the use of various machine learning algorithms to predict customer churn, with the goal of assisting banks in proactively addressing customer attrition. Three classification algorithms - XGBoost, neural networks, and logistic regression - are employed and compared to identify the most effective model for predicting customer churn.
 
+Entire code can be found [here](https://github.com/japnitahuja/predicting-churn/blob/main/predicting_churn.ipynb)
+
 ## Dataset
 
 The Bank Turnover Dataset, obtained from Kaggle, contains information about customers who may or may not leave the bank within the next six months. The dataset comprises 10,000 records and 13 features that can be utilized to predict the customer churn class label.
