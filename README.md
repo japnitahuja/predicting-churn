@@ -21,12 +21,14 @@ The dataset is carefully preprocessed to ensure its quality and suitability for 
 ### Feature Engineering
 It was determined that no two features shared high correlation for aggregation using PCA.
 
-![image](https://github.com/japnitahuja/predicting-churn/assets/10168783/fc16e791-12eb-4240-9911-5283f6d59f83)
+![image](https://github.com/japnitahuja/predicting-churn/assets/10168783/b9c48146-3e35-4783-9841-e73e810087e6)
+
 
 ### Outlier Analysis
 Distribution plots, including histograms and box plots, are employed to detect outliers in numerical features. Credit score, balance, and estimated salary are examined, with credit score showing some outliers. Given the context, these outliers are retained as they could be valid data points.
 
-![image](https://github.com/japnitahuja/predicting-churn/assets/10168783/9f27b3f2-b86e-4263-ac9d-a4c4758778af)
+![image](https://github.com/japnitahuja/predicting-churn/assets/10168783/55eb215a-0102-43ef-823b-c547dc7a6740)
+
 
 
 ## Model Comparison
@@ -38,12 +40,14 @@ Distribution plots, including histograms and box plots, are employed to detect o
 The neural network architecture is shown in figure 14. The input layer consists of 13 neurons for each feature. This is followed by the hidden layer at 9 neurons and the output layer at 1 neuron for binary classification. In the hidden layer, 9 neurons were chosen based on the complexity of the problem. The size of the dataset is not that big, thus to avoid overfitting, a simpler neural network architecture was chosen. This was confirmed through a trial and error method by comparing the
 accuracies achieved at different numbers of neurons in the hidden layer.
 
-![image](https://github.com/japnitahuja/predicting-churn/assets/10168783/769e506a-0b81-4fde-80c1-2d220ebe6d5c)
+![image](https://github.com/japnitahuja/predicting-churn/assets/10168783/ad9189e5-5c80-4686-ae26-f5f61ba2637b)
+
 
 #### Results
 The neural network model achieves competitive results in predicting customer churn, with a particular focus on identifying customers who will stay. The testing accuracy was 86.09% for this model. It exhibits decent accuracy and precision, but its recall remains relatively low, suggesting room for improvement in identifying actual "churn" cases.
 
-![image](https://github.com/japnitahuja/predicting-churn/assets/10168783/78ec3c84-2544-48f5-9a4d-6cad28edb8bf)
+![image](https://github.com/japnitahuja/predicting-churn/assets/10168783/00a46d6e-3ead-4b1f-bf57-5c5b3d80810e)
+
 
 ### XGBoost
 
@@ -52,20 +56,23 @@ The neural network model achieves competitive results in predicting customer chu
 The maximum depth of the trees in Xgboost is identified through a trial and error method by comparing the accuracies achieved at different maximum depth. Maximum test set
 accuracy was seen at 4 depth. Moreover, the learning rate was kept 0.01 to avoid overshooting and to make sure that it doesn’t take too long to converge.
 
-![image](https://github.com/japnitahuja/predicting-churn/assets/10168783/3ea5aaed-1d2c-418d-a56d-e69ecea5c8f4)
+![image](https://github.com/japnitahuja/predicting-churn/assets/10168783/d5e31bf3-2505-4d2b-8544-69802caf3a91)
+
 
 #### Results
 
 XGBoost achieves a testing accuracy of 86.57%. It outperforms the other models in identifying customers who will stay, though there is room for improvement in predicting customers who might leave.
 
-![image](https://github.com/japnitahuja/predicting-churn/assets/10168783/cf5c15a4-45e6-4952-bbcd-c8f51efa663c)
+![image](https://github.com/japnitahuja/predicting-churn/assets/10168783/aae39b16-7c98-4217-ae23-82b6dc77d59f)
+
 
 ### Logistic Regression
 
 #### Results
 Logistic regression achieves a testing accuracy of 80.96%. While it performs well in predicting customers who stay, it lags behind the neural network and XGBoost in identifying potential churners.
 
-![image](https://github.com/japnitahuja/predicting-churn/assets/10168783/7565bacc-5462-452d-9b3e-a3b97db14e06)
+![image](https://github.com/japnitahuja/predicting-churn/assets/10168783/45af792a-7f63-40bd-b24e-d0b8f4601d42)
+
 
 ## Conclusion
 
